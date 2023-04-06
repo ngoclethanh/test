@@ -52,5 +52,6 @@ export class Test1Component implements OnInit {
    
     
     console.log(this.itemList);
+    ///console.log(' fa code');
   }
 }
