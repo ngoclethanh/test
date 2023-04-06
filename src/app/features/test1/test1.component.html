@@ -1,0 +1,23 @@
+<p>test1 works!</p>
+<h1>{{message}}</h1>
+
+<table [value]="items">
+  <thead>
+    <tr>
+<th></th>
+      <th>id</th>
+      <th>titllee</th>
+      <th>author</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let item of items; let i = index">
+    <tr>
+        <td><input type="checkbox"  (ngModelChange)="onChange(item,$event)" [(ngModel)]="item.selected" [name]="'id'+i"></td>
+      <td>{{ i }}</td>
+      <td>{{ item.title }}</td>
+      <td>{{ item.author }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<button (click)="deletePost()">xóa</button>

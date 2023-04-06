@@ -1,0 +1,27 @@
+<p>test works!</p>
+<input type="text" [(ngModel)]="message">
+<button (click)="clickItem()">ấn</button>
+<br>
+<input type="text" [(ngModel)]="commons.categoryCode">
+<input type="text" [(ngModel)]="commons.categoryName">
+<input type="text" [(ngModel)]="commons.description">
+<table [value]="children">
+<thead>
+    <tr>
+        <th>code</th>
+        <th>name</th>
+        <th>description</th>
+    </tr>
+</thead>
+<tbody *ngFor="let item of children;let i=index">
+    <tr>
+        <td><input type="text" [(ngModel)]="item.code" [name]="'code'+i"></td>
+        <td><input type="text" [(ngModel)]="item.name" [name]="'name'+i"></td>
+        <td><input type="number" [(ngModel)]="item.orderNum" [name]="'orderNum'+i"></td>
+        <td><input type="text" [(ngModel)]="item.description" [name]="'description'+i"></td>
+        <td><button (click)="deleteLine(item)">X</button></td>
+    </tr>
+</tbody>
+</table>
+<button (click)="addLine()">tạo</button>
+<button (click)="save()">lưu</button>

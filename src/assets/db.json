@@ -1,0 +1,128 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "title": "json-server 1",
+      "author": "typicode",
+      "id": 2
+    },
+    {
+      "title": "json-server",
+      "author": "typicode",
+      "id": 3
+    },
+    {
+      "title": "",
+      "author": "",
+      "id": 4
+    },
+    {
+      "title": "123",
+      "author": "123",
+      "id": 5
+    },
+    {
+      "title": "sx",
+      "author": "xxx",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "commons": [
+    {
+      "id": 1,
+      "categoryName": "danh mục 2",
+      "description": "zzzzz",
+      "categoryCode": "222",
+      "children": [
+        {
+          "id": 1,
+          "code": "acv12345",
+          "name": "phân quyền",
+          "orderNum": 1,
+          "description": "avz"
+        },
+        {
+          "code": "acv12345",
+          "name": "phân quyền",
+          "orderNum": 1,
+          "description": "avz"
+        }
+      ]
+    },
+    {
+      "categoryName": "danh mục 1 ",
+      "description": "xxx",
+      "categoryCode": "xxxx",
+      "id": 2
+    },
+    {
+      "categoryName": "danh mục 2",
+      "description": "zzzzz",
+      "categoryCode": "222",
+      "children": [
+        {
+          "id": 1,
+          "code": "acv12345",
+          "name": "phân quyền",
+          "orderNum": 1,
+          "description": "avz"
+        },
+        {
+          "code": "acv12345",
+          "name": "phân quyền",
+          "orderNum": 1,
+          "description": "avz"
+        }
+      ],
+      "id": 3
+    },
+    {
+      "categoryName": "xxxx",
+      "description": "aaaa",
+      "categoryCode": "1234",
+      "children": [
+        {
+          "name": "ngoc",
+          "code": "1xx",
+          "orderNum": 111,
+          "description": "123123"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "categoryName": "xxxx",
+      "description": "aaaa",
+      "categoryCode": "1234",
+      "children": [
+        {
+          "name": "ngoc",
+          "code": "1xx",
+          "orderNum": 111,
+          "description": "123123"
+        },
+        {
+          "name": "aa",
+          "code": "2xx",
+          "orderNum": 2,
+          "description": "sưs"
+        }
+      ],
+      "id": 5
+    }
+  ]
+}
