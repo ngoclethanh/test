@@ -1,7 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { FeaturesService } from '../features.service';
+<<<<<<< HEAD
 import { TestComponent } from '../test/test.component';
+=======
+>>>>>>> 603b047 (b1)
 
 @Component({
   selector: 'app-test1',
@@ -51,6 +54,7 @@ export class Test1Component implements OnInit {
       }
    
     
+    //ssss ngojc 
     console.log(this.itemList);
     ///console.log(' fa code');
   }
