@@ -1,11 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import * as _ from 'lodash';
 import { FeaturesService } from '../features.service';
-<<<<<<< HEAD
-import { TestComponent } from '../test/test.component';
-=======
->>>>>>> 603b047 (b1)
-
 @Component({
   selector: 'app-test1',
   templateUrl: './test1.component.html',
@@ -52,10 +47,9 @@ export class Test1Component implements OnInit {
       } else {
         this.itemList= this.itemList.filter((x)=>x !== item.id);
       }
-   
-    
     //ssss ngojc 
     console.log(this.itemList);
     ///console.log(' fa code');
+    console.log('22222 a');
   }
 }
