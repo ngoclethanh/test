@@ -51,7 +51,9 @@ export class Test1Component implements OnInit {
       }
    
     
+    //ssss ngojc 
     console.log(this.itemList);
     ///console.log(' fa code');
+    console.log('22222 a');
   }
 }
