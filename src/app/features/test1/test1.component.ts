@@ -11,9 +11,7 @@ import { TestComponent } from '../test/test.component';
 export class Test1Component implements OnInit {
   message: string = '';
   constructor(private dataService: FeaturesService) {
-    this.dataService.getData().subscribe((message) => {
-      this.message = message;
-    });
+   
   }
   ngOnInit(): void {
     this.loadData();

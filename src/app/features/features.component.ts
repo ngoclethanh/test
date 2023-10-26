@@ -7,35 +7,56 @@ import { FeaturesService } from './features.service';
   styleUrls: ['./features.component.css'],
 })
 export class FeaturesComponent implements OnInit {
-  constructor(private service:FeaturesService) {}
-  items:any[]=[];
-  title:string='';
-  author:string='';
-  ngOnInit(): void {
- 
-this.loadData();
-  }
-  loadData(){
-    this.service.loadData().subscribe({
-      next: (data) =>{
-          this.items=data;
-          console.log(this.items);
-      }
-    })
-    
-    
+  constructor(private service: FeaturesService) {}
+  data = { message: 'Hello from parent!' };
 
+  
+  items: any[] = [];
+  title: string = 'ngọc đz';
+  count:any = {
+    id:3,
+    name:"xxxx"
   }
-  postM(){
-    const data={
-      title:this.title,
-      author:this.author
-    }
+  author: string = '';
+  ngOnInit(): void {
+    this.loadData();
+  }
+  loadData() {
+    this.service.loadData().subscribe({
+      next: (data) => {
+        this.items = data;
+        console.log(this.items);
+      },
+    });
+  }
+  updateData() {
+    this.data.message = 'Updated message from parent!';
+  }
+  postM() {
+    const data = {
+      title: this.title,
+      author: this.author,
+    };
     this.service.post(data).subscribe({
-      next:()=>{
+      next: () => {
         alert('succes');
         this.loadData();
-      }
-    })
+      },
+    });
+  }
+  random1() {
+    this.count = {
+      id:Math.random() * 10/100,
+      name:new Date().getMilliseconds().toString()
+    }
+    // this.count.id = Math.random() * 10/100;
+    // this.count.name = new Date().getMilliseconds().toString();
+  }
+  random2() {
+    this.count.id = Math.random() * 3;
+    this.count.name = new Date().getMilliseconds().toString()
+  }
+  changeDetection(event: any) {
+    this.title = event.value;
   }
 }

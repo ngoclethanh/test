@@ -2,6 +2,19 @@
   <!-- <app-test></app-test> -->
   <div ><app-test1></app-test1></div>
 </div>
+<!-- <div>
+  <app-demo-rxjs></app-demo-rxjs>
+  <app-demo-subject></app-demo-subject>
+</div> -->
+<input type="text" (input)="changeDetection($event.target)" >
+<button (click)="random1()"> click 1</button>
+<button (click)="random2()"> click 2</button>
+<button (click)="updateData()"> update Data</button>
+<div style="display:flex;">
+
+  <app-change-detection-one [text]="title" [count]="count" [childData]="data"></app-change-detection-one>
+  <app-change-detection-two [text]="title" [count]="count" [childData]="data"> </app-change-detection-two>
+</div>
 <!-- <div class="col-12" style="width: 600px"><app-test1></app-test1></div> -->
 <!-- <table [value]="items">
   <thead>

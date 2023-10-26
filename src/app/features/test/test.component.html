@@ -1,6 +1,5 @@
 <p>test works!</p>
 <input type="text" [(ngModel)]="message">
-<button (click)="clickItem()">ấn</button>
 <br>
 <input type="text" [(ngModel)]="commons.categoryCode">
 <input type="text" [(ngModel)]="commons.categoryName">
@@ -25,3 +24,22 @@
 </table>
 <button (click)="addLine()">tạo</button>
 <button (click)="save()">lưu</button>
+
+
+
+
+<h1>{{ arrayList[currentIndex]?.name }}</h1>
+<button (click)="chuyenMang()" [disabled]="disabled">Chuyển</button>
+<form #f="ngForm" (ngSubmit)="submit()">
+    <input type="text" [(ngModel)]="text" name="text">
+    <button type="submit" > click me</button>
+</form>
+
+<div><input type="checkbox" name="isSelectAll" (ngModelChange)="selectALl($event)" [(ngModel)]="isSelectAll">check all</div>
+<div *ngFor="let item of arrayList;let i=index">
+<div class="d-flex" style="display: flex;justify-content: space-around;">
+    <div><input type="checkbox" [name]="'isSelected_'+i" [(ngModel)]="item.isSelected" (ngModelChange)="selected($event,item)"></div>
+    <div>{{item.id}}</div>
+    <div>{{item.name}}</div>
+</div>
+</div>
